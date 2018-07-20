@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <title>Teach for Australia</title>
+</head>
+<body>
+  <div id="app">
+    <v-app :dark="dark">
+      <v-toolbar app>
+        <v-toolbar-title>My Application</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-btn flat @click="dark = !dark"> {{ toggleDark }} </v-btn>
+      </v-toolbar>
+
+      <v-content>
+        <v-container fluid>
+          Hello World
+        </v-container>
+      </v-content>
+      
+      <v-footer></v-footer>
+    </v-app>
+  </div>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script>  (for production)-->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- (for development)-->
+  <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: () => ({
+        dark: false,
+      }),
+      computed: {
+        toggleDark() {
+          return (this.dark ? 'Use Light Mode' : 'Use Dark Mode')
+        },
+      },
+    })
+  </script>
+</body>
+</html>
